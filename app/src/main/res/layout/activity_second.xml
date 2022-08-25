@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".SecondActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+
+    <EditText
+        android:id="@+id/task_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft ="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Task"
+        android:padding="20dp"
+        android:maxHeight="300dp"
+        android:minHeight="100dp"
+        android:background="@drawable/bg_edittext"
+
+ />
+
+    <Button
+        android:id ="@+id/save_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft ="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Save Task"
+        android:layout_below="@id/task_et"/>
+
+
+</RelativeLayout>
