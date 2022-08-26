@@ -9,10 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 class TaskAdapter(val list:ArrayList<com.example.task.Task>): RecyclerView.Adapter<TaskAdapter.Task>(){
 
     class Task(item: View) :RecyclerView.ViewHolder(item){
-        lateinit var taskName:TextView
+        lateinit var taskTitle:TextView
+        lateinit var taskDesc:TextView
+
 
         init {
-            taskName = item.findViewById(R.id.taskName)
+            taskTitle = item.findViewById(R.id.taskName)
+            taskDesc = item.findViewById(R.id.taskDescription)
         }
     }
 
@@ -22,7 +25,9 @@ class TaskAdapter(val list:ArrayList<com.example.task.Task>): RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: Task, position: Int) {
-        holder.taskName.text = list.get(position).taskDescription
+        holder.taskTitle.text = list.get(position).taskTitle
+        holder.taskDesc.text = list.get(position).taskDescription
+
     }
 
     override fun getItemCount(): Int {

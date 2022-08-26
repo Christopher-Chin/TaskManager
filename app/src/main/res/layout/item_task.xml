@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="#F7F794"
-    android:layout_height="70dp"
+    android:layout_height="100dp"
+    android:orientation="vertical"
     android:layout_margin="3dp">
 
 
@@ -12,10 +13,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:text="taskName"
+        android:text="Task Name"
         android:textColor="@color/black"
-        android:layout_marginLeft="50px"
+        android:layout_marginLeft ="10dp"
+        android:layout_marginTop = "10dp"
+        android:layout_marginBottom ="5dp"
         android:textSize ="18dp"
+        />
+
+    <TextView
+        android:id="@+id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Task Description"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:textSize ="14dp"
         />
 
 
