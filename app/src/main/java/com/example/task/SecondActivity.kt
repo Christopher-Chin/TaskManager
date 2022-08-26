@@ -32,8 +32,7 @@ class SecondActivity : AppCompatActivity() {
         toolbarTitle.text = "Add new Task"
 
         button.setOnClickListener{
-
-
+            
             if(taskTitle.text.toString().length==0){
                 Toast.makeText(SecondActivity@this,"Please enter your task title",Toast.LENGTH_LONG).show()
                 return@setOnClickListener
@@ -43,8 +42,6 @@ class SecondActivity : AppCompatActivity() {
                 Toast.makeText(SecondActivity@this,"Please enter your task description",Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-
-
 
             var task=Task()
             task.taskTitle=taskTitle.text.toString()

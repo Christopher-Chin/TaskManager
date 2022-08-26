@@ -29,20 +29,21 @@ class MainActivity : AppCompatActivity() {
         toolbarTitle.text = "Task Manager"
 
         toolbarIcon.setOnClickListener {
-            var intent = Intent(this, SecondActivity::class.java)
+                var intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
 
         initAdapter()
     }
-            override fun onResume(){
-                super.onResume()
-                adapter.notifyDataSetChanged()
-            }
+
+    override fun onResume(){
+        super.onResume()
+        adapter.notifyDataSetChanged()
+    }
 
     fun initAdapter()
     {
-        adapter=TaskAdapter(list)
+        adapter=TaskAdapter(list, applicationContext)
         rv_tasks.layoutManager = LinearLayoutManager(this)
         rv_tasks.adapter = adapter
     }
